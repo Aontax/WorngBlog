@@ -1,0 +1,22 @@
+# main links
+main:
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  - title: "Blog"
+    url: /
+  # - title: "Pages"
+  #   url: /page-archive/
+  - title: "归档"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "历史"
+    url: /year-archive/
+  # - title: "Collections"
+  #   url: /collection-archive/
+  - title: "About"
+    url: /about/
+  # - title: "站点地图"
+  #   url: /sitemap/
