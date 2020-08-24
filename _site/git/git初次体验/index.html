@@ -1,0 +1,801 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>git初次体验 - Antax</title>
+<meta name="description" content="git 命令速查表">
+
+
+  <meta name="author" content="安好">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antax">
+<meta property="og:title" content="git初次体验">
+<meta property="og:url" content="http://localhost:4000/Antax/git/git%E5%88%9D%E6%AC%A1%E4%BD%93%E9%AA%8C/">
+
+
+  <meta property="og:description" content="git 命令速查表">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/Antax/assets/images/BJ1.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-08-23T00:00:00+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/Antax/git/git%E5%88%9D%E6%AC%A1%E4%BD%93%E9%AA%8C/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "安好",
+      "url": "http://localhost:4000/Antax/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/Antax/feed.xml" type="application/atom+xml" rel="alternate" title="Antax Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/Antax/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/Antax/"><img src="/Antax/assets/images/logoBig.png" alt=""></a>
+        
+        <a class="site-title" href="/Antax/">
+          Antax
+          <span class="site-subtitle">Born alone</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/Antax/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Antax/categories/">归档</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Antax/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Antax/year-archive/">历史</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Antax/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/Antax/assets/images/title.png" alt="安好" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">安好</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>清雨化作酒，新风邀入眠。</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Chengdu</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/mmistakes" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="mailto:811226051@qq.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://antax.gitee.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="git初次体验">
+    <meta itemprop="description" content="git 命令速查表">
+    <meta itemprop="datePublished" content="2020-08-23T00:00:00+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">git初次体验
+</h1>
+          
+
+
+  <p class="page__meta">
+
+    
+      
+      <i class="far fa-calendar-alt" aria-hidden="true"></i>
+      <time datetime="2020-08-23T00:00:00+08:00">August 23, 2020</time>
+    
+
+    
+      
+      <span class="post__meta-sep"></span>
+      
+    
+
+    
+      
+      
+
+      <i class="far fa-clock" aria-hidden="true"></i>
+      
+        3 minute read
+      
+    
+
+  </p>
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="git-命令速查表">git 命令速查表</h2>
+
+<p><img src="https://i.loli.net/2020/08/23/L1Pac4W6GT3CHBu.png" alt="img" /></p>
+
+<h2 id="初次提交命令">初次提交命令</h2>
+
+<p>今天说说怎么通过 git 基本命令把本地项目成功上传到 Gitee 远端仓库（GitHub 类似）。主要是防止遗忘，方便复盘，默认已经配置好公钥私钥。</p>
+
+<p>首先在个人 Gitee 账户创建一个用来存放项目的仓库，然后点击克隆/下载按钮选择地址复制。</p>
+
+<p>在本地项目文件夹下打开<code class="language-plaintext highlighter-rouge">Git Bash</code>，初始化本地仓库：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div>
+
+<p>发现当前目录下多了一个 <strong>.git</strong>文件夹，表示成功初始化本地 git 仓库。</p>
+
+<p>现在要用到之前复制的 Gitee 仓库地址：origin 是仓库简称，可以使用其他名称</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//关联本地仓库和远端仓库
+git remote add origin （刚刚复制的地址/不要写括号）
+</code></pre></div></div>
+
+<p>如果之前创建仓库时选了 README.md 初始化仓库的，<strong>需要更新下本地仓库</strong>，以免上传项目时产生冲突：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//当然，没有选 README.md 的同学也可以敲下，权当练手了
+git pull --rebase origin master
+</code></pre></div></div>
+
+<p>因为 Git 的结构，我们先将项目上传到本地暂存区：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//添加项目所有发生改变的文件
+git add .
+//Git 强烈建议在提交代码时备注信息
+git commit -m '你的备注信息可以是中文'
+</code></pre></div></div>
+
+<p>如果这时 Git Bash 弹出信息问你是谁，那么代表你是第一次在本机上使用 Git，那就告诉它你的大名吧：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.email "你的邮箱"
+git config --global user.name "你的大名"
+</code></pre></div></div>
+
+<p>最后将本地仓库代码提交到远端仓库就好：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push -u origin master
+
+# -u ，就是创建 upStream 上传流，如果没有这个上传流就无法将代码推送到 github；同时，这个 upStream 只需要在初次推送代码的时候创建，以后就不用创建了
+</code></pre></div></div>
+
+<p><strong>此后项目更新</strong>，上传仓库只要在对应项目路径下打开 Git Bash 输入：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+# 添加全部修改的代码，准备提交
+git commit -m '备注'
+# 将修改后的代码先提交到本地仓库
+git push
+# 将代码推送到远端仓库 , 默认推送到别名为origin的仓库中的master分支上
+# 同时，可以使用命令git push origin master指定推送
+</code></pre></div></div>
+
+<p><strong>注意事项：</strong></p>
+
+<p>如果有多个远程仓库 或者 多个分支， 并且需要将代码推送到指定仓库的指定分支上，那么在 pull 或者 push 的时候，就需要 按照下面的格式书写：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull 仓库别名 仓库分支名
+# 将 远端 的代码拉取到本地，如果只是自己做的项目，可以忽略pull
+git push 仓库别名 仓库分支名
+# 将代码推送到 远端仓库
+</code></pre></div></div>
+
+<h2 id="阮一峰-git-教程命令">阮一峰 git 教程命令</h2>
+
+<h4 id="新建代码库">新建代码库</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 在当前目录新建一个Git代码库
+$ git init
+# 新建一个目录，将其初始化为Git代码库
+$ git init [project-name]
+# 下载一个项目和它的整个代码历史
+$ git clone [url]
+</code></pre></div></div>
+
+<h4 id="配置">配置</h4>
+
+<p>Git 的设置文件为<code class="language-plaintext highlighter-rouge">.gitconfig</code>，它可以在用户主目录下，也可以在项目目录下。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 显示当前的Git配置
+$ git config --list
+# 编辑Git配置文件
+$ git config -e [--global]
+# 设置提交代码时的用户信息
+$ git config [--global] user.name "[name]"
+$ git config [--global] user.email "[email address]"
+</code></pre></div></div>
+
+<h4 id="增加删除文件">增加/删除文件</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 添加指定文件到暂存区
+$ git add [file1] [file2] ...
+# 添加指定目录到暂存区，包括子目录
+$ git add [dir]
+# 添加当前目录的所有文件到暂存区
+$ git add .
+# 删除工作区文件，并且将这次删除放入暂存区
+$ git rm [file1] [file2] ...
+# 停止追踪指定文件，但该文件会保留在工作区
+$ git rm --cached [file]
+# 改名文件，并且将这个改名放入暂存区
+$ git mv [file-original] [file-renamed]
+</code></pre></div></div>
+
+<h4 id="代码提交">代码提交</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 提交暂存区到仓库区
+$ git commit -m [message]
+# 提交暂存区的指定文件到仓库区
+$ git commit [file1] [file2] ... -m [message]
+# 提交工作区自上次commit之后的变化，直接到仓库区
+$ git commit -a
+# 提交时显示所有diff信息
+$ git commit -v
+# 使用一次新的commit，替代上一次提交
+# 如果代码没有任何新变化，则用来改写上一次commit的提交信息
+$ git commit --amend -m [message]
+# 重做上一次commit，并包括指定文件的新变化
+$ git commit --amend &lt;file1&gt; &lt;file2&gt; ...
+</code></pre></div></div>
+
+<h4 id="分支">分支</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 列出所有本地分支
+$ git branch
+# 列出所有远程分支
+$ git branch -r
+# 列出所有本地分支和远程分支
+$ git branch -a
+# 新建一个分支，但依然停留在当前分支
+$ git branch [branch-name]
+# 新建一个分支，并切换到该分支
+$ git checkout -b [branch]
+# 新建一个分支，指向指定commit
+$ git branch [branch] [commit]
+# 新建一个分支，与指定的远程分支建立追踪关系
+$ git branch --track [branch] [remote-branch]
+# 切换到指定分支，并更新工作区
+$ git checkout [branch-name]
+# 建立追踪关系，在现有分支与指定的远程分支之间
+$ git branch --set-upstream [branch] [remote-branch]
+# 合并指定分支到当前分支
+$ git merge [branch]
+# 选择一个commit，合并进当前分支
+$ git cherry-pick [commit]
+# 删除分支
+$ git branch -d [branch-name]
+# 删除远程分支
+$ git push origin --delete &lt;branch-name&gt;
+$ git branch -dr &lt;remote/branch&gt;
+</code></pre></div></div>
+
+<h4 id="标签">标签</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 列出所有tag
+$ git tag
+# 新建一个tag在当前commit
+$ git tag [tag]
+# 新建一个tag在指定commit
+$ git tag [tag] [commit]
+# 查看tag信息
+$ git show [tag]
+# 提交指定tag
+$ git push [remote] [tag]
+# 提交所有tag
+$ git push [remote] --tags
+# 新建一个分支，指向某个tag
+$ git checkout -b [branch] [tag]
+</code></pre></div></div>
+
+<h4 id="查看信息">查看信息</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 显示有变更的文件
+$ git status
+# 显示当前分支的版本历史
+$ git log
+# 显示commit历史，以及每次commit发生变更的文件
+$ git log --stat
+# 显示某个文件的版本历史，包括文件改名
+$ git log --follow [file]
+$ git whatchanged [file]
+# 显示指定文件相关的每一次diff
+$ git log -p [file]
+# 显示指定文件是什么人在什么时间修改过
+$ git blame [file]
+# 显示暂存区和工作区的差异
+$ git diff
+# 显示暂存区和上一个commit的差异
+$ git diff --cached [&lt;file&gt;]
+# 显示工作区与当前分支最新commit之间的差异
+$ git diff HEAD
+# 显示两次提交之间的差异
+$ git diff [first-branch]...[second-branch]
+# 显示某次提交的元数据和内容变化
+$ git show [commit]
+# 显示某次提交发生变化的文件
+$ git show --name-only [commit]
+# 显示某次提交时，某个文件的内容
+$ git show [commit]:[filename]
+# 显示当前分支的最近几次提交
+$ git reflog
+</code></pre></div></div>
+
+<h4 id="远程同步">远程同步</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 下载远程仓库的所有变动
+$ git fetch [remote]
+# 显示所有远程仓库
+$ git remote -v
+# 显示某个远程仓库的信息
+$ git remote show [remote]
+# 增加一个新的远程仓库，并命名
+$ git remote add [shortname] [url]
+# 取回远程仓库的变化，并与本地分支合并
+$ git pull [remote] [branch]
+# 上传本地指定分支到远程仓库
+$ git push [remote] [branch]
+# 强行推送当前分支到远程仓库，即使有冲突
+$ git push [remote] --force
+# 推送所有分支到远程仓库
+$ git push [remote] --all
+</code></pre></div></div>
+
+<h4 id="撤销">撤销</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 恢复暂存区的指定文件到工作区
+$ git checkout [file]
+# 恢复某个commit的指定文件到工作区
+$ git checkout [commit] [file]
+# 恢复上一个commit的所有文件到工作区
+$ git checkout .
+# 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变
+$ git reset [file]
+# 重置暂存区与工作区，与上一次commit保持一致
+$ git reset --hard
+# 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变
+$ git reset [commit]
+# 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致
+$ git reset --hard [commit]
+# 重置当前HEAD为指定commit，但保持暂存区和工作区不变
+$ git reset --keep [commit]
+# 新建一个commit，用来撤销指定commit
+# 后者的所有变化都将被前者抵消，并且应用到当前分支
+$ git revert [commit]
+</code></pre></div></div>
+
+<h4 id="其他">其他</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 生成一个可供发布的压缩包
+# git archive
+</code></pre></div></div>
+
+<h2 id="遇到的问题">遇到的问题</h2>
+
+<p><strong>问题描述：github 上开发的代码突然发现代码性能变差了，需要往前查 PR（pull request），查找是哪一次的提交或修改出错了。</strong></p>
+
+<p>解决方法：找出历史 commit id ，代码回滚到这一个版本，然后重新编译测试。</p>
+
+<p>(1)本地代码回滚：</p>
+
+<p>回退命令：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --hard HEAD^         回退到上个版本
+
+git reset --hard HEAD~3        回退到前3次提交之前，以此类推，回退到n次提交之前
+
+git reset --hard commit_id     退到/进到 指定commit的sha码
+</code></pre></div></div>
+
+<p>强推到远程：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin HEAD --force
+</code></pre></div></div>
+
+<p>（2）回溯到某一版本后希望看这两个版本中见有哪些修改（哪几次提交代码，修改了哪些文件）</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff commit-ID       //可以比较出和某一次commit后代码到差别
+</code></pre></div></div>
+
+<p>（git log //可以列出从当前版本往前的 commit ID）</p>
+
+<p><strong>问题描述：错误提醒<code class="language-plaintext highlighter-rouge">error: failed to push some refs to...</code>。</strong></p>
+
+<p>然后就发现，这个 error 发生的情况竟然还挺多样化。鉴于自己搜到的页面，都是分散的答案，所以在此做个总结，以免日后又碰到这类错误，烂记性又促使我花费一样的时间去寻找一样的答案。</p>
+
+<ul>
+  <li><strong>分支名不完整</strong></li>
+</ul>
+
+<p>这个错误大概是最难发现的了，不是说难度系数高，而是大家都把以本地 master 与远程 master 为例去写答案，于是大家会下意识忽略掉本地分支与远程分支名不一样的情况。（也可能这个大家只包含了我….）</p>
+
+<p>git 推送的完整写法如下：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push @remoteName  @localBranch:@remoteBranch
+// eg.remoteName:origin  localBranch:ceshi  emoteBranch:test
+git push origin ceshi:test
+</code></pre></div></div>
+
+<p>如果本地分支与远程分支名字一样的话，是可以简写的。例如本地和远程的分支名都是 master：</p>
+
+<pre><code class="language-undefined">git push origin master
+</code></pre>
+
+<p>如果确认分支名没有错，那就继续往下看</p>
+
+<ul>
+  <li><strong>没有提交代码</strong></li>
+</ul>
+
+<p>可以用 <code class="language-plaintext highlighter-rouge">git status</code>查看是否忘了把代码提交上去了。若是忘了，提交了就行。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git add <span class="nb">.</span>
+  git commit <span class="nt">-m</span> <span class="s2">"This is a new commit"</span>
+  git push origin master
+</code></pre></div></div>
+
+<ul>
+  <li><strong>本地与远程产生冲突</strong></li>
+</ul>
+
+<p>产生原因：或是有其他协作者提交了代码，或是你之前在远程上直接做了处理。</p>
+
+<p>处理方法：一是直接强覆盖，二是先把远程的变化拉取下来，解决冲突后，再一并提交。</p>
+
+<ol>
+  <li>强覆盖</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="nt">-f</span> origin master
+</code></pre></div></div>
+
+<ol>
+  <li>拉取再提交</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull –-rebase origin maste
+git push origin master
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">--rebase</code>到底是干嘛用的，为什么要加他？<code class="language-plaintext highlighter-rouge">–rebase</code>的作用是取消掉本地库中刚刚的 commit，并把他们接到更新后的版本库之中.</p>
+
+<p><img src="https://i.loli.net/2020/08/23/wcmfXKpoM6AySC3.png" alt="gitpush失败2" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">git pull --rebase origin master</code>意为先取消 commit 记录，并且把它们临时 保存为补丁(patch)(这些补丁放到”.git/rebase”目录中)，之后同步远程库到本地，最后合并补丁到本地库之中。</p>
+
+<p><img src="https://i.loli.net/2020/08/23/GZeh8xATMfbrVHj.png" alt="gitpush失败3" /></p>
+
+<p>之后就可以将其 push 到远端仓库了：</p>
+
+<p><img src="https://i.loli.net/2020/08/23/wEHDpnb5qv7gXNF.png" alt="gitpush失败4" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'nihao!'</span><span class="p">)</span>
+
+<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">30</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="nb">sum</span> <span class="o">+=</span> <span class="n">i</span>
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/Antax/categories/git" class="page__taxonomy-item" rel="tag">Git</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-08-23T00:00:00+08:00">August 23, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+            
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/Antax/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 安好. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/Antax/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/Antax/assets/js/lunr/lunr.min.js"></script>
+<script src="/Antax/assets/js/lunr/lunr-store.js"></script>
+<script src="/Antax/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
